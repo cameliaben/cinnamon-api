@@ -17,6 +17,10 @@
         "description": "API for users in the system"
       },
       {
+        "name": "News",
+        "description": "Endpoints for news-related data."
+      },
+      {
         "name": "Onboarding",
         "description": "Basic examples"
       }
@@ -53,6 +57,26 @@
           "responses": {
             "200": {
               "description": "User Logged In.",
+              "schema": {
+                "$ref": "#/definitions/User"
+              }
+            }
+          }
+        }
+      },
+      "/news": {
+        "get": {
+          "tags": [
+            "News"
+          ],
+          "description": "News resources.",
+          "parameters": [],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "News titles received.",
               "schema": {
                 "$ref": "#/definitions/User"
               }
